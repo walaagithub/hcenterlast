@@ -1,0 +1,61 @@
+page-about {
+    ion-card-header {
+        background-color: #cc0000;
+    }
+    .gps1{
+        float:left;
+        padding-top: 5px;
+        width: 30px;
+        height: 30px;
+        background:white;
+    }
+
+    .rate1{
+        contain: size;
+        float: right;
+        padding-top: 5px;
+        width: 25px;
+        height: 25px;
+        background:white;
+    }
+    .card1{
+       margin: 20px auto 0;
+        // border: 1px solid rgb(162, 158, 158); 
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .block {
+        position: relative;
+        .deleteIcon {
+          position: absolute !important;
+          color: #ffffff !important;
+          margin-left: 80% !important;
+        }
+        .deleteIcon:before {
+          font-size: 30px !important;
+        }
+
+
+        .custom-button {
+            background-color:#f8f8f8;
+            
+        }
+    
+    } 
+        ion-spinner * {
+           width: 50px;
+           height: 45px;
+      }
+
+      //dir search bar
+      .searchbar-input {
+          direction: rtl;
+      }
+//cards font size and shadow
+      .card-header-md {
+        font-size: 1.4rem;
+       color:#dcdcdc;
+
+
+      }
+}

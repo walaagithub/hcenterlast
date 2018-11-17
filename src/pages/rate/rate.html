@@ -1,0 +1,137 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <h5> {{itemName}}</h5>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <!--rate-->
+  <div class="rbox1">
+    <rating [(ngModel)]="rate" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false"
+      (ngModelChange)="onModelChange($event)">
+    </rating>
+   <h6>{{rate}}</h6>
+    <button ion-button (click)="SaveRate(RateInfo)">ارسال التقييم</button>
+
+  </div>
+  <br>
+  <br>
+  <div class="rbox2">
+    <button ion-button [disabled]="disabled" (click)="printRateNubmer() " (click)="disButton()" (click)="showDiv()"> نتائج التقييم لهذا المركز </button>
+    <div *ngIf="hideMe">
+
+
+
+
+      <!-- {{rateNumber.rPersonNumber}} -->
+
+
+
+      
+
+      <h6>
+        <ion-icon name="star-half">
+          <span style="font-size: 12px"> {{rateNumber.ratePercent}} المعدل</span>
+        </ion-icon>
+      </h6>
+      <h6>
+        <ion-icon name="person">
+          <span style="font-size: 12px"> {{rateNumber.rPersonNumber}} عدد المقيمين</span>
+        </ion-icon>
+      </h6>
+
+<div>
+      <div class="star5">
+        5
+        <ion-icon name="star" class="scolor"></ion-icon>
+      </div>
+      <div class="star5">
+        <progress-bar [progress]="loadProgress"></progress-bar>
+      </div>
+      
+      <div class="star5">
+        <span style="font-size: 12px">
+          <ion-icon name="person"> {{rateNumber.r5}} </ion-icon>
+        </span>
+      </div>
+    </div>
+
+
+
+<div>
+      <div class="star4">
+          4
+          <ion-icon name="star" class="scolor"></ion-icon>
+        </div>
+        <div class="star4">
+          <progress-bar [progress]="loadProgress"></progress-bar>
+        </div>
+        
+        <div class="star4">
+          <span style="font-size: 12px">
+            <ion-icon name="person"> {{rateNumber.r4}} </ion-icon>
+          </span>
+        </div>
+      </div>
+
+      <div>
+        <div class="star3">
+            3
+            <ion-icon name="star" class="scolor"></ion-icon>
+          </div>
+          <div class="star3">
+            <progress-bar [progress]="loadProgress"></progress-bar>
+          </div>
+          
+          <div class="star3">
+            <span style="font-size: 12px">
+              <ion-icon name="person"> {{rateNumber.r3}} </ion-icon>
+            </span>
+          </div>
+        </div>
+
+<div>
+          <div class="star2">
+              2
+              <ion-icon name="star" class="scolor"></ion-icon>
+            </div>
+            <div class="star2">
+              <progress-bar [progress]="loadProgress"></progress-bar>
+            </div>
+            
+            <div class="star2">
+              <span style="font-size: 12px">
+                <ion-icon name="person"> {{rateNumber.r2}} </ion-icon>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <div class="star1">
+               1
+                <ion-icon name="star" class="scolor"></ion-icon>
+              </div>
+              <div class="star1">
+                <progress-bar [progress]="loadProgress"></progress-bar>
+              </div>
+              
+              <div class="star1">
+                <span style="font-size: 12px">
+                  <ion-icon name="person"> {{rateNumber.r1}} </ion-icon>
+                </span>
+              </div>
+            </div>
+    </div>
+  </div>
+
+  <div class="icon-img">
+      <img src="../../assets/imgs/icon.png"/>
+    </div>  
+    
+
+
+</ion-content>

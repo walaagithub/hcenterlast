@@ -1,0 +1,7 @@
+{
+  "name": "hcenters",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

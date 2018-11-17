@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      من نحن
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="list">
+
+    <ion-item>
+      <ion-icon name="book" item-left></ion-icon>
+      <ion-label class="about">البرمجة من اجل العراق</ion-label>
+      <ion-toggle [(ngModel)]="part1"></ion-toggle>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="alert" item-left></ion-icon>
+      <ion-label class="about">فريق العمل</ion-label>
+      <ion-toggle [(ngModel)]="part2"></ion-toggle>
+
+    </ion-item>
+    <ion-item>
+      <ion-icon name="star" item-left></ion-icon>
+      <ion-label class="about">التقييم</ion-label>
+      <ion-toggle [(ngModel)]="part3" [(ngModel)]="isToggled" (ionChange)="YES1()"></ion-toggle>
+
+    </ion-item>
+
+    <p class="text1" *ngIf="part1">
+      وهي مبادرة إنسانية غير ربحية تهدف الى خدمة المجتمع عن طريق البرمجة , تعتبر <span style="color: red">“البرمجة من اجل العراق ”</span>  مبادرة تعليمية حقيقية
+      ترعى المهتمين بتعلم تصميم وبرمجة تطبيقات الهاتف الجوال ومواقع الانترنت وبرامج الحاسوب والشبكات والاتصالات ونظم تشغيل
+      الحاسوب باستخدام التقنيات مفتوحة المصدر ، كما توفر لهم جميع الدروس التعليمية اللازمة وبشكل مجاني تماماً</p>
+
+
+      <ion-list *ngIf="part2" class="text2">
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="../../assets/imgs/logoname.jpg">
+            </ion-avatar>
+            <h2>آسيا محمود احمد</h2>
+          </ion-item>
+          <ion-item>
+              <ion-avatar item-start>
+                <img src="../../assets/imgs/logoname.jpg">
+              </ion-avatar>
+              <h2>سوران احمد حسن</h2>
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start >
+                  <img src="../../assets/imgs/logoname.jpg">
+                </ion-avatar>
+                <h2>ولاء تحسين فاضل </h2>
+              </ion-item>
+        </ion-list>
+    
+  </ion-list>
+
+
+
+  <ion-card class="logo">
+      <img src="../../assets/imgs/c4i.png"/>
+      <ion-card-content>
+      </ion-card-content>
+    </ion-card>
+
+
+
+</ion-content>

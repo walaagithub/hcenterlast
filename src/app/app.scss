@@ -1,0 +1,55 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+html{
+    direction: rtl;
+    
+}
+//font type
+@font-face{
+    font-family:Cairo;
+    src: url('../assets/fonts/Cairo-Bold.ttf');
+}
+body, span, button, h1, h2, h3, h4, h5, h6, p, ion-item, ion-title, ion-card {
+    font-family: 'Cairo' !important;
+    
+    }
+
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color:#cc0000;
+}
+.tabs-md .tab-button[aria-selected=true] {
+    color: #cc0000;
+}
+.tabs-md .tabbar{
+    background-color: #f8f8f8;
+    ;
+}
+
+//tab buttons controls when hover
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    
+    -webkit-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -7px, 0);
+}
+//tab button size
+.tabs-md .tab-button-icon {
+    margin-top: 6px;
+    min-width: 2.4rem;
+    font-size: 2.7rem;
+}
+
